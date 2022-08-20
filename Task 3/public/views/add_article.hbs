@@ -1,0 +1,22 @@
+{{>header}}
+{{>navbar}}
+    <form method="post">
+        <div class="mb-3">
+            <input placeholder="title" name="title" 
+            class="form-control" value="{{data.title}}">
+            {{#if errors.title}}
+            <p class="alert alert-danger my-2">{{errors.title}}</p>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <input placeholder="content" name="content" class="form-control" ty
+            value="{{data.content}}">
+            {{#if errors.content}}
+            <p class="alert alert-danger my-2">{{errors.content}}</p>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add Article</button>
+        </div>
+    </form>
+{{>footer}}

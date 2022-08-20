@@ -1,0 +1,28 @@
+{{>header}}
+{{>navbar}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#id</th>
+            <th>title</th>
+            <th>content</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each articles}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+            <td>
+                <a href="/single/{{_id}}" class="btn btn-primary mx-2">Show</a>
+                <a href="/edit/{{_id}}" class="btn btn-warning mx-2">Edit</a>
+                <a href="/dele/{{_id}}" class="btn btn-danger mx-2">Delete</a>
+                <a href="/comment/{{_id}}" class="btn btn-primary mx-2">Comment</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{>footer}}

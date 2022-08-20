@@ -1,0 +1,26 @@
+{{>header}}
+{{>navbar}}
+{{#unless article}}
+
+<div class="alert alert-danger">
+    article not found
+</div>
+
+{{else}}
+
+<li>{{article._id}}</li>
+<li>{{article.title}}</li>
+<li>{{article.content}}</li>
+{{#each article.comments}}
+       <li>Comments:</li> 
+    <ul>
+        <li>
+            {{name}}
+        </li>
+        <li>
+            {{details}}
+        </li>
+    </ul>
+{{/each}}
+{{/unless}}
+{{>footer}}
